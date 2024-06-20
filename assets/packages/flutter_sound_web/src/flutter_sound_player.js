@@ -16,8 +16,7 @@
  * along with Flutter-Sound.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
-const PLAYER_VERSION = '8.2.0'
+const PLAYER_VERSION = '9.6.0'
 
 function newPlayerInstance(aCallback, callbackTable) { return new FlutterSoundPlayer(aCallback, callbackTable); }
 
@@ -154,7 +153,7 @@ class FlutterSoundPlayer {
         /* ACTUALLY NOT USED
                 playAudioFromBuffer(dataBuffer) // Actually not used
                 {
-        
+
                         var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
                         var source = audioCtx.createBufferSource();
                         me.callbackTable[CB_player_log](me.callback, DBG, dataBuffer.constructor.name)
@@ -164,7 +163,7 @@ class FlutterSoundPlayer {
                                 function(buffer)
                                 {
                                         source.buffer = buffer;
-        
+
                                         source.connect(audioCtx.destination);
                                         source.loop = false;
                                            // start the source playing
@@ -218,7 +217,7 @@ class FlutterSoundPlayer {
 
         }
 
-        startPlayer(codec, fromDataBuffer, fromURI, numChannels, sampleRate) {
+        startPlayer(codec, fromDataBuffer, fromURI, numChannels, sampleRate, bufferSize) {
                 this.callbackTable[CB_player_log](this.callback, DBG, 'JS: ---> startPlayer');
                 this.stop();
                 if (this.temporaryBlob != null) {
