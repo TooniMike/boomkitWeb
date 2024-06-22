@@ -1,6 +1,6 @@
 {
-    "name": "picture_pick",
-    "short_name": "picture_pick",
+    "name": "boomkit",
+    "short_name": "boomkit",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
