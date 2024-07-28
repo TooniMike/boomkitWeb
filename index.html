@@ -27,12 +27,47 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <!-- <link rel="icon" type="image/png" href="favicon.png"/> -->
+
+  <link rel="icon" type="image/png" href="logo.jpg"/>
 
   <title>boomkit</title>
   <link rel="manifest" href="manifest.json">
+  <title>Loading Indicator</title>
+
+  <style>
+    .container {
+      background-color: #111621;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* position: relative; */
+    }
+
+    .indicator {
+      width: 120px;
+      height: 120px;
+      /* height: auto;  */
+    }
+
+    .title {
+            color: white;
+            font-size: 24px; /* Adjust font size as needed */
+            font-weight: bold;
+            /* position: absolute; */
+            margin-top: 20px;
+            /* Adjust distance from the bottom */
+        }
+  </style>
 </head>
-<body>
+<body style="overflow: hidden; margin: 0;">
+  <div id="loading_indicator" class="container">
+    <img class="indicator" src="./assets/loading.gif" alt="Loading"/>
+    <div class="title">Boomkit</div>
+  </div>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
